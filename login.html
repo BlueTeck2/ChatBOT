@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>BlueTeck AI Imagination</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+  <script lang="javascript">
+      function solve() {
+        
+          var logname = document.getElementById('first').value;
+          var logpwd = document.getElementById('password').value;
+          var loginList = {};
+        
+          loginList["admin1"] = "admin";
+          loginList["spatel"] = "spatel";
+          loginList["dpatel"] = "jaisriram";
+          loginList["tpatel"] = "yuvaanisthecutest";
+          loginList["Guest"] = "Guest";
+          loginList["skale"] = "skale";
+          loginList["myi"] = "myi";
+          loginList["ypatel"] = "ypatel";
+          loginList["admin2"] = "admin110";
+          loginList["Test1"] = "Test110";
+          loginList["purpleelephantgamer"] = "will";
+          loginList["FLW"] = "e";
+          loginList["acampbell"] = "acampbell";
+          loginList["asami"] = "asami";
+          loginList["admin3"] = "admin120";
+          
+          
+        
+        
+        if (loginList[logname] === logpwd) 
+          {     
+            location.href = '/chatbot.html';
+            
+          } else {
+              alert('Login failed');
+          }
+        
+      }
+  </script>
+<body>
+    <div class="main">
+        <h1>BlueTeck AI ChatBOT</h1>
+        <h3>Enter your login credentials</h3>
+         <form action=chatbot.html>
+            <label for="first">
+                Username:
+            </label>
+            <input type="text" id="first" name="first" placeholder="Enter your Username" required>
+
+            <label for="password">
+                Password:
+            </label>
+            <input type="password" id="password" name="password" placeholder="Enter your Password" required>
+
+            <div class="wrap">
+                <button type="button" onclick="solve()">
+                    Submit
+                </button>
+            </div>
+         </form> 
+        
+    </div>
+
+
+
+  © Copyright 2024 BlueTeck AI, All rights reserved

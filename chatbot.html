@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  BlueTeck AI ChatBOT
+  <script src="script.js"></script>
+</body>
+
+</html>
+  <div id="chatbot-container">
+    <input type="text" id="user-input" placeholder="Type your message...">
+    <button id="send-button">Send</button>
+    <ul id="chatlog"></ul>
+  </div>
+    <script>
+      var aiGreeting = "Hello! How can I assist you today?";
+      document.getElementById('chatlog').innerHTML += '<li><strong>BlueTeck AI:</strong> ' + aiGreeting + '</li>';
+    </script>
+    <script>
+      function sendMessage() {
+        var userMessage = document.getElementById('user-input').value;
+        document.getElementById('chatlog').innerHTML += '<li><strong>User:</strong> ' + userMessage + '</li>';
+        // Add logic to handle user message
+      }
+
+      document.getElementById('send-button').addEventListener('click', sendMessage);
+    </script>
+
+<div>
+    <input type="text" id="num1" />
+    <input type="text" id="num2" />
+    <button onclick="calculate()">Calculate</button>
+    <p id="result"></p>
+</div>
+
+<script>
+    function calculate() {
+        var num1 = parseFloat(document.getElementById('num1').value);
+        var num2 = parseFloat(document.getElementById('num2').value);
+        var resultAdd = num1 + num2;
+        var resultSubtract = num1 - num2;
+        var resultMultiply = num1 * num2;
+        var resultDivide = num1 / num2;
+        document.getElementById('result').innerText = "Added Result: " + resultAdd + ". Subtracted Result: " + resultSubtract + ". Multiplied Result: " + resultMultiply + ". Divided Result: " + resultDivide;
+    }
+</script>
+    <button id="delete-history-button">Delete Chat History</button>
+    <script>
+        document.getElementById('delete-history-button').addEventListener('click', function() {
+            document.getElementById('chatlog').innerHTML = '';
+        });
+    </script>
+    <script>
+      function engageConversation() {
+        var input = document.getElementById('user-input').value;
+        var response = "";
+        if (input.toLowerCase() === 'hi' || input.toLowerCase() === 'hello') {
+            response = "Hello!";
+        } else if (input.toLowerCase() === 'how are you?') {
+        response = "I'm good, how are you?";
+        } else 
+        {
+            response = generateAIResponse(input);
+        }
+        document.getElementById('chatlog').innerHTML += '<li><strong>BlueTeck AI:</strong> ' + response + '</li>';
+      }
+
+      function generateAIResponse(input) {
+        // Add logic to generate AI response based on user input
+        return "This is the AI response to: " + input;
+      }
+
+      document.getElementById('send-button').addEventListener('click', engageConversation);
+    </script>
+<script></script>
+    <button id="restart-button">Restart App</button>
+    <script>
+        document.getElementById('restart-button').addEventListener('click', function() {
+            // Reload the page to restart the entire app
+            location.reload();
+        });  
+    function engageConversation1() {
+        var input = document.getElementById('user-input').value;
+        var response = "";
+        if (input.toLowerCase() === 'hi' || input.toLowerCase() === 'hello') {
+            response = "Hello!";
+        } else if (input.toLowerCase() === 'how are you?') {
+            response = "I'm good, how are you?";
+        } else {
+            response = generateAIResponse(input);
+        }
+        document.getElementById('chatlog').innerHTML += '<li><strong>BlueTeck AI:</strong> ' + response + '</li>';
+    }
+    </script>
+
+
+
+© Copyright 2024 BlueTeck AI, All rights reserved
